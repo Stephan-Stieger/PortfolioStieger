@@ -1,3 +1,37 @@
 ---
-
+import Link  from '../../src/components/Link.astro'
 ---
+
+<footer class="border-t-2 border-white h-fit">
+    <div class="flex flex-row w-full gap-16 justify-around p-16 flex-wrap">
+        <div class="flex flex-col gap-8 mb-16">
+            <p>Socials</p>
+            <div class="bg-white h-0.5 w-full"></div>
+            <div class="flex flex-row gap-8">
+                <img src="/Assets/SocialMedia/InstagramLogo.png" alt="Instagram" class="h-12 w-12">
+                <p>Instagram</p>
+            </div>
+            <div class="flex flex-row gap-8">
+                <img src="/Assets/SocialMedia/LinkedInLogo.png" alt="LinkedIn" class="h-12 w-12">
+                <p>LinkedIn</p>
+            </div>
+            <div class="flex flex-row gap-8">
+                <img src="/Assets/SocialMedia/github-mark-white.svg" alt="Github" class="h-12 w-12">
+                <p>Github</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8 mb-16">
+            <p>Contact</p>
+            <div class="bg-white h-0.5 w-full"></div>
+            <Link text="stephanstieger2002(at)gmail.com"></Link>
+            <Link text="+43 (650) 964 392 9"></Link>
+        </div>
+        <div class="flex flex-col gap-8">
+            <p>Legal Details</p>
+            <div class="bg-white h-0.5 w-full"></div>
+            <Link text="EU Cookie Policy"></Link>
+            <Link text="Impressum"></Link>
+            <Link text="Legal Notice"></Link>
+        </div>
+    </div>
+</footer>

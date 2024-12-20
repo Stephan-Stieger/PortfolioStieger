@@ -1,8 +1,10 @@
 ---
-
+const Menue=['Home','About','Contact','Services']
+const allPages:any = await Astro.glob('../../src/pages/*.astro');
+import '../../src/helper.ts';
 ---
-
-<div>
-    <p>test</p>
-    <p>test</p>
+<div class="m-32">
+    {getPathOfAListOfComponents(allPages).map((path) => (
+            <a class="hover:underline hover:scale-105" href={`/${path}`}>{path}</a>
+    ))}
 </div>

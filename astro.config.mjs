@@ -11,5 +11,6 @@ import markdoc from '@astrojs/markdoc';
 
 // https://astro.build/config
 export default defineConfig({
+  site:'http://localhost:4321/#',
   integrations: [tailwind(), sitemap(), mdx(), markdoc()]
 });

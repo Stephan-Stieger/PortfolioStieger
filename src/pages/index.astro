@@ -1,9 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Header from '../components/Header.astro';
+
+import '../helper.ts'; // Ensure this import is present to include the prototype extension
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+
 ---
 
-<div class="bg-black w-screen h-screen text-white">
- <Header></Header>
-</div>
+<BaseLayout>
+ Index
+</BaseLayout>

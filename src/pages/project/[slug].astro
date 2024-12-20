@@ -1,0 +1,14 @@
+---
+export async function getStaticPaths() {
+    const allPorjects:any = await Astro.glob('../../../src/content/project/*.mdx');
+    return allPorjects.map((item) => ({
+        params: { slug: item.url.split("/").pop() },
+        props: {
+            ...item,
+        },
+    }));
+}
+const {Content,frontmatter: { title },} = Astro.props;
+---
+
+<Content></Content>
