@@ -1,10 +1,19 @@
 ---
-const Menue=['Home','About','Contact','Services']
-const allPages:any = await Astro.glob('../../src/pages/*.astro');
-import '../../src/helper.ts';
+import {getPathFromModuleId} from "../helper";
+import Link from "./Link.astro";
+import * as AboutMe from '../pages/aboutMe.astro';
+import * as Contact from '../pages/contact.astro';
+import * as Home from '../pages/index.astro';
+import * as Project from '../pages/projects.astro';
+import { parse } from 'node-html-parser';
+
+//const allPages:any = await Astro.glob('../../src/pages/*.astro');
+//const pathsAndTitles = await getPathAndTitleOfAListOfComponents(allPages);
+
+const Pages=[AboutMe,Contact,Home,Project];
 ---
-<div class="m-32">
-    {getPathOfAListOfComponents(allPages).map((path) => (
-            <a class="hover:underline hover:scale-105" href={`/${path}`}>{path}</a>
-    ))}
+<div class="flex justify-end gap-16 h-32 p-16">
+        {Pages.map((component) => (
+                <Link href={`/${getPathFromModuleId(component.default.moduleId)}`}>{component.TITEL}</Link>
+        ))}
 </div>

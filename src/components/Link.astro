@@ -1,4 +1,14 @@
 ---
-const {text,href} = Astro.props
+const {href} = Astro.props
 ---
-<button class="text-left hover:underline hover:scale-105"> {text}</button>
+
+{href===undefined
+    ?
+        <a href={href} class="text-left hover:underline hover:scale-105 text-red-500 cursor-not-allowed" >
+            <slot></slot>
+        </a>
+    :
+        <a href={href} class="text-left hover:underline hover:scale-105" >
+            <slot></slot>
+        </a>
+    }

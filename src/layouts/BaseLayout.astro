@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="min-w-fit">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -14,7 +14,7 @@ import Header from "../components/Header.astro";
 	</head>
 	<body class="flex flex-col h-screen text-white bg-black text-3xl">
 		<Header></Header>
-		<div class="flex-grow">
+		<div class="flex-grow min-h-screen p-16">
 			<slot />
 		</div>
 		<Footer></Footer>

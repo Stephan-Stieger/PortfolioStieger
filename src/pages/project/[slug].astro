@@ -1,4 +1,5 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
 export async function getStaticPaths() {
     const allPorjects:any = await Astro.glob('../../../src/content/project/*.mdx');
     return allPorjects.map((item) => ({
@@ -9,6 +10,8 @@ export async function getStaticPaths() {
     }));
 }
 const {Content,frontmatter: { title },} = Astro.props;
----
 
-<Content></Content>
+---
+<BaseLayout>
+    <Content></Content>
+</BaseLayout>

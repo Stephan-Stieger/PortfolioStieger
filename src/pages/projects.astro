@@ -1,0 +1,16 @@
+---
+import {getPathOfAListOfComponents} from "../helper";
+import Link from "../components/Link.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const allProjects = await Astro.glob('../../src/content/project/*.mdx');
+export const TITEL="Projects"
+---
+<BaseLayout>
+    <div class="flex flex-col">
+        {getPathOfAListOfComponents(allProjects).map((path) => (
+                <div class="m-4 p-4 border rounded-lg border-primary-300 shadow-[0px_7px_10px_0px_rgba(169,96,236,_0.3)]">
+                    <Link href={`/project/${path}.mdx`}>{path}</Link>
+                </div>
+        ))}
+    </div>
+</BaseLayout>
