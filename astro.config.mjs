@@ -9,8 +9,10 @@ import mdx from '@astrojs/mdx';
 
 import markdoc from '@astrojs/markdoc';
 
+import icon from 'astro-icon';
+
 // https://astro.build/config
 export default defineConfig({
   site:'http://localhost:4321/#',
-  integrations: [tailwind(), sitemap(), mdx(), markdoc()]
+  integrations: [tailwind(), sitemap(), mdx(), markdoc(), icon()]
 });
