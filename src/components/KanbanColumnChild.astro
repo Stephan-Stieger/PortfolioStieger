@@ -1,0 +1,37 @@
+---
+
+import Badge from "./Badge.astro";
+import {Icon} from "astro-icon/components";
+import Link from "./Link.astro";
+const { projectTitle,fromDate,toDate,technologies,githubUrl,fileUrl} = Astro.props
+console.log(Astro.props)
+---
+<div class="hover:scale-105 m-4 h-64 p-8 border flex flex-col gap-8 rounded-2xl border-primary-300 shadow-[0px_7px_10px_0px_rgba(169,96,236,_0.3)]">
+    <div class="flex flex-row justify-between">
+        <p class="text-4xl underline">{projectTitle}</p>
+        {githubUrl && (
+            <a target="_blank" href={githubUrl} class="flex flex-row hover:underline">
+                <p>Github</p>
+                <Icon name='mdi:open-in-new' />
+            </a>
+        )}
+    </div>
+    <div>
+        <p class="text-lg ">Technologies:</p>
+        <div class="flex flex-row gap-2">
+            {technologies.map((tech:any) => (
+                    <Badge name={tech.name} color={tech.color} icon={tech.icon} />
+            ))}
+        </div>
+    </div>
+
+    <div class="flex flex-row justify-between">
+        <div class="flex flex-row items-center text-lg">
+            <Icon name="mdi:calendar-range"/>
+            <span>{fromDate} - {toDate}</span>
+        </div>
+        {fileUrl && (
+                <Link href={fileUrl}>More</Link>
+        )}
+    </div>
+</div>

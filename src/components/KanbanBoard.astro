@@ -1,0 +1,72 @@
+---
+
+import KanbanColumn from "./KanbanColumn.astro";
+
+const ToDoList = [
+    {
+        projectTitle: "Trading Bot Platform",
+        fromDate: "Mrz. 2025",
+        toDate: "...",
+        githubUrl: "",
+        fileUrl:"",
+        technologies: [
+            { name: "Typescript",  color:"yellow", icon: "language-typescript" },
+            { name: "RabbitMQ",  color:"red", icon: "rabbit" },
+            { name: "C#",  color:"blue", icon: "" },
+            { name: "Python",  color:"green", icon: "language-python" },
+            { name: "Alpaca",  color:"purple", icon: "api", url:"https://docs.alpaca.markets/" },
+            // Add more technologies as needed
+        ]
+    }
+];
+const InProgressList = [
+    {
+        projectTitle: "Portfolio Website",
+        fromDate: "Nov. 2024",
+        toDate: "Today",
+        githubUrl: "https://github.com/Stephan-Stieger/PortfolioStieger.git",
+        fileUrl:"/project/AstroWebPortfolio.mdx",
+        technologies: [
+            { name: "Typescript",  color:"yellow", icon: "language-typescript" },
+            { name: "Tailwind",  color:"blue", icon: "tailwind" },
+            { name: "Astro",  color:"green", icon: "rocket-launch" },
+            { name: "MDX Files",  color:"red", icon: "language-markdown" },
+            { name: "",  color:"", icon: "" },
+        ]
+    },
+    {
+        projectTitle: "Firmen Dashboard",
+        fromDate: "Mrz. 2023",
+        toDate: "Today",
+        githubUrl: "",
+        fileUrl:"",
+        technologies: [
+            { name: "Typescript",  color:"yellow", icon: "language-typescript" },
+            { name: "Tailwind",  color:"blue", icon: "tailwind" },
+            { name: "Angular",  color:"red", icon: "angular" },
+            { name: "C#",  color:"green", icon: "" },
+            { name: "SQL",  color:"purple", icon: "database" },
+        ]
+    }
+];
+const DoneList = [
+    {
+        projectTitle: "AdventOfCode2024",
+        fromDate: "Dez. 2024",
+        toDate: "Dez. 2024",
+        githubUrl: "https://github.com/Stephan-Stieger/AdventOfCode2024",
+        fileUrl:"",
+        technologies: [
+            { name: "Python",  color:"green", icon: "language-python" },
+            { name: "Jupyter",  color:"red", icon: "notebook" },
+
+            // Add more technologies as needed
+        ]
+    }
+];
+---
+<section class=" w-full flex flex-row">
+    <KanbanColumn title="To Do" projects={ToDoList}></KanbanColumn>
+    <KanbanColumn title="In Progress" projects={InProgressList}></KanbanColumn>
+    <KanbanColumn title="Done" projects={DoneList}></KanbanColumn>
+</section>
