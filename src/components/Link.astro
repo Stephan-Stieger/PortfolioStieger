@@ -4,7 +4,7 @@ const {href} = Astro.props
 
 {href===undefined
     ?
-        <a href={href} class="text-left hover:underline hover:scale-105 text-red-500 cursor-not-allowed" >
+        <a href={href} class="text-left hover:underline hover:scale-105 cursor-not-allowed" >
             <slot></slot>
         </a>
     :

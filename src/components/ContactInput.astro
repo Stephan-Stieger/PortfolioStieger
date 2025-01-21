@@ -1,0 +1,7 @@
+---
+const {text} = Astro.props
+---
+<label class="flex flex-col gap-1 h-16 text-white text-lg">
+    <span class="text-sm ">{text}:</span>
+    <input class="h-full bg-black focus:outline-0 border-b-2 border-white " type="text" name="username" required />
+</label>

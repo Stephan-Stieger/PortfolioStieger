@@ -1,8 +1,48 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import {Icon} from "astro-icon/components";
+import Link from "../components/Link.astro";
 export const TITEL="Contact"
 ---
 
 <BaseLayout>
-    <p>Hi2</p>
+    <p class="text-[10rem]">Got a project?</p>
+    <div class="w-full grid grid-cols-2 gap-8 max-w-[1500px]">
+        <div class=" flex flex-row justify-center border border-white rounded-2xl text-white p-8">
+            <ContactForm></ContactForm>
+        </div>
+        <div class="border border-white rounded-2xl p-8 flex flex-col justify-between">
+            <div class="flex flex-row items-center gap-4">
+                <div class="h-16 w-16 rounded-2xl">
+                    <Icon class="h-full w-full" name='mdi:instagram' />
+                </div>
+                <Link>stephan.stieger</Link>
+            </div>
+            <div class="flex flex-row items-center gap-4">
+                <div class="h-16 w-16 rounded-2xl">
+                    <Icon class="h-full w-full" name='mdi:telephone' />
+                </div>
+                <Link>+43 678 8773817</Link>
+            </div>
+            <div class="flex flex-row items-center gap-4">
+                <div class="h-16 w-16 rounded-2xl">
+                    <Icon class="h-full w-full" name='mdi:mail' />
+                </div>
+                <Link>ststieger@testmail.com</Link>
+            </div>
+            <div class="flex flex-row items-center gap-4">
+                <div class="h-16 w-16 rounded-2xl">
+                    <Icon class="h-full w-full" name='mdi:twitter' />
+                </div>
+                <Link>@stephan</Link>
+            </div>
+            <div class="flex flex-row items-center gap-4">
+                <div class="h-16 w-16 rounded-2xl">
+                    <Icon class="h-full w-full" name='mdi:linkedin' />
+                </div>
+                <Link>Stephan Stieger</Link>
+            </div>
+        </div>
+    </div>
 </BaseLayout>

@@ -1,0 +1,26 @@
+---
+import ContactInput from "./ContactInput.astro";
+---
+<form class="grid grid-cols-10 h-full max-w-96 p-2 gap-12">
+    <div class="col-span-4">
+        <ContactInput text="Name"></ContactInput>
+    </div>
+    <div class="col-span-6">
+        <ContactInput text="Email"></ContactInput>
+    </div>
+    <div class="col-span-5">
+        <ContactInput text="Position"></ContactInput>
+    </div>
+    <div class="col-span-5">
+        <ContactInput text="Company"></ContactInput>
+    </div>
+    <div class="col-span-10">
+        <ContactInput text="Project"></ContactInput>
+    </div>
+    <div class="col-span-10">
+        <ContactInput text="Budget"></ContactInput>
+    </div>
+    <div class="col-span-10">
+        <button class="w-full p-1  rounded-lg bg-white text-black hover:scale-[1.02] ">Submit</button>
+    </div>
+</form>
