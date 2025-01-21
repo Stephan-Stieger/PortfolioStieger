@@ -1,14 +1,14 @@
 ---
 
 import '../helper.ts'; // Ensure this import is present to include the prototype extension
-
+import Hero from "../components/Hero.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 export const TITEL="Home"
 
 ---
 
 <BaseLayout>
- Index
+ <Hero></Hero>
 </BaseLayout>
 <div>
  <span class="bg-primary-100 "></span>
