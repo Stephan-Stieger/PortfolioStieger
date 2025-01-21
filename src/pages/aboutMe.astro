@@ -2,40 +2,46 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Feature from "../components/Feature.astro";
 import Counter from "../components/Counter.astro";
+import Hero from "../components/Hero.astro";
 export const TITEL="About Me"
 ---
 
 <BaseLayout>
+
+    <Hero></Hero>
     <section class="w-fit">
         <div class="container">
             <h2 class="mb-16 text-6xl">Features</h2>
             <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-                <Feature icon="mdi:tailwind" title="Tailwind CSS">
-                    Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
+                <Feature icon="mdi:language-java" title="Java-Entwicklung">
+                    Fundierte Erfahrung in objektorientierter Programmierung und der Entwicklung robuster Backend-Systeme mit Java.
                 </Feature>
-                <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
-                    17 components and counting, all tried and tested for the most optimal accessible experience for your visitors.
+                <Feature icon="mdi:language-python" title="Python-Programmierung">
+                    Umfassendes Wissen in der Skripterstellung, Datenverarbeitung und Backend-Entwicklung mit Python.
                 </Feature>
-                <Feature icon="mdi:looks" title="Prettier">
-                    Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
+                <Feature icon="mdi:language-typescript" title="TypeScript-Entwicklung">
+                    Expertise in der Entwicklung sicherer und skalierbarer Anwendungen mit TypeScript.
                 </Feature>
-                <Feature icon="mdi:eslint" title="ESLint">
-                    Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
+                <Feature icon="mdi:language-javascript" title="JavaScript-Programmierung">
+                    Tiefgehendes Verständnis von JavaScript für Frontend- und Backend-Entwicklung.
                 </Feature>
-                <Feature icon="mdi:book-open-page-variant" title="Blog">
-                    This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
+                <Feature icon="mdi:web" title="Astro Framework">
+                    Erfahrung in der Erstellung performanter und moderner statischer Websites mit Astro.
                 </Feature>
-                <Feature icon="mdi:language-markdown" title="Markdown & MDX">
-                    Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
+                <Feature icon="mdi:angular" title="Angular-Framework">
+                    Entwicklung dynamischer und skalierbarer Webanwendungen mit Angular und TypeScript.
                 </Feature>
-                <Feature icon="mdi:theme-light-dark" title="Dark mode">
-                    Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
+                <Feature icon="mdi:vuejs" title="Vue.js-Entwicklung">
+                    Praktische Kenntnisse in der Erstellung reaktiver Benutzeroberflächen mit Vue.js.
                 </Feature>
-                <Feature icon="mdi:cog" title="Design System">
-                    The theme offers some very handy utilities to help you build your website faster.
+                <Feature icon="mdi:database" title="SQL-Datenbanken">
+                    Erfahrung in der Abfrage, Analyse und Verwaltung relationaler Datenbanken mit SQL.
                 </Feature>
-                <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
-                    Excellent lighthouse scores means your website will load faster and get better SEO rankings.
+                <Feature icon="mdi:cloud" title="Cloud-Integration">
+                    Implementierung von Backend-Systemen und Datenbanklösungen in Cloud-Umgebungen.
+                </Feature>
+                <Feature icon="mdi:code-tags" title="Full-Stack-Entwicklung">
+                    Umfassende Erfahrung in der Frontend- und Backend-Entwicklung mit modernen Technologien und Frameworks.
                 </Feature>
             </div>
         </div>

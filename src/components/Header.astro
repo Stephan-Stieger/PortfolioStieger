@@ -18,8 +18,10 @@ const Pages=[AboutMe,Contact,Home,Project];
     </div>
     <div class="flex justify-end gap-16">
         {Pages.map((component) => (
+            component.TITEL!='Home' && (
                 <Link href={`/${getPathFromModuleId(component.default.moduleId)}`}>{component.TITEL}</Link>
-        ))}
+            )
+            ))}
     </div>
 </div>
 
