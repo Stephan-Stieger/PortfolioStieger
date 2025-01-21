@@ -6,7 +6,7 @@ import Link from "./Link.astro";
 const { projectTitle,fromDate,toDate,technologies,githubUrl,fileUrl} = Astro.props
 console.log(Astro.props)
 ---
-<div class="hover:scale-105 m-4 h-64 p-8 border flex flex-col gap-8 rounded-2xl border-primary-300 shadow-[0px_7px_10px_0px_rgba(169,96,236,_0.3)]">
+<div class="hover:scale-[1.01] m-4 h-64 p-8 border flex flex-col gap-8 rounded-2xl border-primary-300 shadow-[0px_7px_10px_0px_rgba(169,96,236,_0.3)]">
     <div class="flex flex-row justify-between">
         <p class="text-4xl underline">{projectTitle}</p>
         {githubUrl && (
@@ -20,7 +20,7 @@ console.log(Astro.props)
         <p class="text-lg ">Technologies:</p>
         <div class="flex flex-row gap-2">
             {technologies.map((tech:any) => (
-                    <Badge name={tech.name} color={tech.color} icon={tech.icon} />
+                    <Badge name={tech.name} clazz={tech.clazz} icon={tech.icon} />
             ))}
         </div>
     </div>

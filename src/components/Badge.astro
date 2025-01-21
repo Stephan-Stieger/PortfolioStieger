@@ -1,9 +1,9 @@
 ---
 import {Icon} from "astro-icon/components";
-const { name, color,icon,url } = Astro.props
+const { name, clazz,icon,url } = Astro.props
 
 ---
-<div class={`bg-${color}-500 text-${color}-950 inline-flex flex-row rounded-2xl text-base px-2 py-1 align-middle justify-center items-center`}>
+<div class={`${clazz} inline-flex flex-row rounded-2xl text-base px-2 py-1 align-middle justify-center items-center`}>
     {icon && <Icon name={`mdi:${icon}`}/>}
     <span >{name}</span>
 </div>
