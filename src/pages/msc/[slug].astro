@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import '../../../public/Assets/scss/MDX.scss';
 export async function getStaticPaths() {
-    const allPorjects:any = await Astro.glob('../../../src/content/project/*.mdx');
+    const allPorjects:any = await Astro.glob('../../../src/content/msc/*.mdx');
     return allPorjects.map((item) => ({
         params: { slug: item.url.split("/").pop() },
         props: {
