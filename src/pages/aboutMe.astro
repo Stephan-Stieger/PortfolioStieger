@@ -10,8 +10,16 @@ export const TITEL="About Me"
 
     <Hero></Hero>
     <section class="w-fit">
+        <div class="grid grid-cols-1 gap-20 sm:grid-cols-2 md:grid-cols-4">
+            <Counter count="13" title="Repositories" sub="On GitHub" />
+            <Counter count="17" title="Accessible" sub="Components" />
+            <Counter count="121" title="Commits" sub="Merged" />
+            <Counter count="96" title="Months" sub="Developing" />
+        </div>
+    </section>
+    <section class="w-fit">
         <div class="container">
-            <h2 class="mb-16 text-6xl">Features</h2>
+            <h2 class="mb-16 text-6xl">Kenntnisse</h2>
             <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
                 <Feature icon="mdi:language-java" title="Java-Entwicklung">
                     Fundierte Erfahrung in objektorientierter Programmierung und der Entwicklung robuster Backend-Systeme mit Java.
@@ -43,17 +51,15 @@ export const TITEL="About Me"
                 <Feature icon="mdi:code-tags" title="Full-Stack-Entwicklung">
                     Umfassende Erfahrung in der Frontend- und Backend-Entwicklung mit modernen Technologien und Frameworks.
                 </Feature>
+                <Feature icon="mdi:clipboard-list" title="Anforderungen einholen">
+                    Erfahrung in der Erfassung und Analyse von Anforderungen zur Sicherstellung der Projektziele und -anforderungen.
+                </Feature>
+                <Feature icon="mdi:chart-line" title="Data Science mit Python Notebooks">
+                    Fundierte Kenntnisse in der Datenanalyse und -visualisierung mit Python Notebooks für datengetriebene Entscheidungen.
+                </Feature>
             </div>
         </div>
     </section>
 
-    <section class="w-fit">
-        <h2 class="mb-16 text-6xl">Counters</h2>
-        <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-            <Counter count="520" title="Stars" sub="On GitHub" />
-            <Counter count="17" title="Accessible" sub="Components" />
-            <Counter count="500" title="Commits" sub="Merged" />
-            <Counter count="18+" title="Months" sub="Since launch" />
-        </div>
-    </section>
+
 </BaseLayout>
